@@ -1,5 +1,5 @@
 import React, { ImgHTMLAttributes, forwardRef } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 type CardImageProps = ImgHTMLAttributes<HTMLImageElement>;
 
 export const CardImage = forwardRef<HTMLImageElement, CardImageProps>(

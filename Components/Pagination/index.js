@@ -1,4 +1,3 @@
-import { Content } from "next/font/google";
 import { PaginationRoot } from "./PaginationRoot";
 import { PaginationContent } from "./PaginationContent";
 import { PaginationItem } from "./PaginationItem";

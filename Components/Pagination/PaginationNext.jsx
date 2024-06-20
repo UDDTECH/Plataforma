@@ -1,12 +1,9 @@
-import React, { ComponentProps, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { PaginationLink } from "./PaginationLink";
 import { CiSquareChevRight } from "react-icons/ci";
 import { cn } from "../../lib/util";
 
-export const PaginationNext = forwardRef<
-  HTMLAnchorElement,
-  ComponentProps<typeof PaginationLink>
->(({ className, ...props }, ref) => {
+export const PaginationNext = forwardRef(({ className, ...props }, ref) => {
   return (
     <PaginationLink
       aria-label="Próxima Página"

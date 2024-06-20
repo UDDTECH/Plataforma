@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, forwardRef } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 
 type CardFooterProps = HTMLAttributes<HTMLDivElement>;
 

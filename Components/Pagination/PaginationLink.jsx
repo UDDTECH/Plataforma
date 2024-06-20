@@ -1,11 +1,7 @@
-import React, { ComponentProps, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { cn } from "../../lib/util";
 
-export type PageLinkProps = ComponentProps<"a"> & {
-  isActive?: boolean;
-};
-
-export const PaginationLink = forwardRef<HTMLAnchorElement, PageLinkProps>(
+export const PaginationLink = forwardRef(
   ({ isActive, className, ...props }, ref) => {
     return (
       <a

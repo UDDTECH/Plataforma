@@ -1,5 +1,5 @@
 import React, { forwardRef, HTMLAttributes } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 type CardRootProps = HTMLAttributes<HTMLDivElement>;
 
 export const CardRoot = forwardRef<HTMLDivElement, CardRootProps>(

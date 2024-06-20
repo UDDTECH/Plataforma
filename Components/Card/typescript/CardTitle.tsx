@@ -1,9 +1,9 @@
 import React, { HTMLAttributes, forwardRef } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 
 type CardTitleProps = HTMLAttributes<HTMLHeadingElement>;
 
-const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
+export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
   ({ className, ...props }, ref) => {
     return (
       <h3
@@ -17,5 +17,5 @@ const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
     );
   }
 );
-export default CardTitle;
+
 CardTitle.displayName = "CardTitle";
