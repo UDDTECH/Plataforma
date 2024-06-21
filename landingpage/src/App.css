@@ -7,15 +7,41 @@
   pointer-events: none;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.container{
+  padding-right: 100px;
+}
+
+.link {
+  margin-top: 27px; /* Distância vertical acima do link */
+  margin-bottom: 27px; /* Distância vertical abaixo do link */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+.header-gradient {
+  background: linear-gradient(to top, #242730, #01305A);
+}
+.text-link{
+  font-size: 15px;
+}
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 99vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +49,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
 
 .App-link {
   color: #61dafb;
