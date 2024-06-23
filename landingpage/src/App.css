@@ -7,8 +7,14 @@
   pointer-events: none;
 }
 
+.person{
+  width: 20px;
+  height: 20px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 .App-header {
   background-color: #282c34;
@@ -18,13 +24,75 @@ body {
   justify-content: center; 
 }
 
+
+.button-entrar{
+  width: 130px;
+  height: 45px;
+  background: linear-gradient(to right, #4286F4 0%, #08A0F7 100%);
+}
+
 .container{
   padding-right: 100px;
 }
+.logo, .person {
+  max-width: 100%; 
+  height: auto; 
+}
 
-.link {
-  margin-top: 27px; /* Distância vertical acima do link */
-  margin-bottom: 27px; /* Distância vertical abaixo do link */
+/* Ajustes gerais */
+.logo, .button-entrar, nav a {
+  margin-right: 1rem; /* Espaçamento padrão entre elementos */
+}
+
+/* Reduz o espaçamento para telas menores */
+@media (max-width: 768px) {
+  .logo, .button-entrar, nav a {
+    margin-right: 0.5rem; /* Espaçamento 
+  }
+
+  .container {
+    padding: 4px 8px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .logo, .button-entrar, nav a {
+    margin-right: 0.25rem; 
+  }
+
+  .container {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos */
+  }
+
+  nav a {
+    display: block; /* Faz cada link ocupar sua própria linha */
+  }
+
+  .button-entrar {
+    margin-top: 0.5rem; /* Adiciona um espaçamento superior para o botão */
+  }
+}
+
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  nav {
+    width: 100%; 
+  }
+
+  .space-x-6 {
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+}
+a {
+  text-decoration: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,19 +116,4 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
