@@ -1,6 +1,6 @@
 import React, { ComponentProps, forwardRef } from "react";
 import { CiSquareMore } from "react-icons/ci";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 
 export const PaginationEllipsis = forwardRef<
   HTMLSpanElement,

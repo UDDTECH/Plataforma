@@ -1,7 +1,7 @@
 import React, { ComponentProps, forwardRef } from "react";
 import { PaginationLink } from "./PaginationLink";
 import { CiSquareChevLeft } from "react-icons/ci";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 
 export const PaginationPrevious = forwardRef<
   HTMLAnchorElement,

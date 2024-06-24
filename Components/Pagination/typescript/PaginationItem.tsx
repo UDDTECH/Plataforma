@@ -1,5 +1,5 @@
 import React, { ComponentProps, forwardRef } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 
 export const PaginationItem = forwardRef<HTMLLIElement, ComponentProps<"li">>(
   ({ className, ...props }, ref) => {

@@ -1,5 +1,5 @@
 import React, { ComponentProps, HTMLAttributes, forwardRef } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
 export const PaginationRoot = forwardRef<HTMLElement, ComponentProps<"nav">>(
   ({ className, ...props }, ref) => {
     return (

@@ -1,12 +1,19 @@
 import React, { forwardRef } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "../../../lib/util";
+import { buttonVariants } from "../../Button/Button";
 
-export const PaginationLink = forwardRef(
-  ({ isActive, className, ...props }, ref) => {
+const PaginationLink = forwardRef(
+  ({ isActive, className, size = "lg", ...props }, ref) => {
     return (
       <a
         aria-current={isActive ? "page" : undefined}
-        className={cn(`${isActive ? "bg-slate-200/80" : ""}`, className)}
+        className={cn(
+          buttonVariants({
+            variant: isActive ? "outline" : "ghost",
+            size,
+          }),
+          className
+        )}
         {...props}
         ref={ref}
       />
@@ -15,3 +22,5 @@ export const PaginationLink = forwardRef(
 );
 
 PaginationLink.displayName = "PaginationLink";
+
+export default PaginationLink;
