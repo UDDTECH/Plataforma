@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*CSS NAVBAR*/
+@layer components {
+  .navbar {
+    @apply flex items-center bg-gradient-to-br from-header/70 via-header/80 to-black p-4 rounded-b-sm border-b border-blue-800;
+  }
+  .navbar__container {
+    @apply flex items-center justify-between w-full;
+  }
+  .navbar__logo {
+    @apply ml-14 lg:ml-20 flex justify-start;
+  }
+  .navbar__logo-link {
+    @apply text-white font-bold text-sm lg:text-lg;
+  }
+  .navbar__toggle-button {
+    @apply bg-white rounded-full flex justify-end transition ease-in duration-150 gap-4 mr-5;
+  }
+  .navbar__toggle-button--hidden {
+    @apply hidden;
+  }
+  .navbar__toggle-button--active {
+    @apply rotate-180;
+  }
+  .navbar__toggle-icon {
+    @apply h-5 w-5 text-black;
+  }
+  .navbar__items {
+    @apply justify-end items-center gap-2 lg:gap-6 hidden md:flex;
+  }
+  .navbar__list {
+    @apply flex text-white text-sm lg:text-lg xl:text-lg space-x-5 md:space-x-3;
+  }
+  .navbar__list--hidden {
+    @apply hidden;
+  }
+  .navbar__item {
+    @apply flex items-center;
+  }
+  .navbar__link {
+    @apply py-3 inline-block w-full hover:underline hover:underline-offset-2;
+  }
+  .navbar__button {
+    @apply gap-1 bg-header text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
+  }
+  .navbar__button--cadastro {
+    @apply gap-1 bg-blue-900 text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
+  }
+  .navbar__icon {
+    @apply h-5 w-6;
+  }
+  .navbar__theme-switcher {
+    @apply flex justify-end px-1;
+  }
+  .navbar__hidden {
+    @apply absolute flex md:hidden w-full justify-end;
+  }
+  .navbar__hidden--visible {
+    @apply px-3;
+  }
+  .navbar__hidden-container {
+    @apply flex flex-col w-fit py-2 bg-gradient-to-r from-header gap-y-1 to-black px-4 rounded-lg border border-blue-800/80;
+  }
+  .navbar__divider {
+    @apply fill-black my-2;
+  }
+  .navbar__hidden-list {
+    @apply flex flex-col text-sm justify-end text-white;
+  }
+  .navbar__hidden-item {
+    @apply flex items-center space-x-2;
+  }
+  .navbar__hidden-link {
+    @apply py-3 inline-block w-full hover:bg-header px-3 rounded-md;
+  }
+}
+/*CSS FOOTER*/
+@layer components {
+  .footer-landing {
+    @apply static w-full z-0 bottom-0 rounded-sm pb-6 px-4 bg-white;
+  }
+  .footer {
+    @apply static w-full z-0 bottom-0 rounded-sm pb-6 px-4 bg-black pt-5;
+  }
+  .footer-grid-landing {
+    @apply grid grid-cols-6 md:grid-cols-12 font-semibold text-center gap-3 mx-6 bg-white;
+  }
+  .footer-grid {
+    @apply grid grid-cols-6 md:grid-cols-12 font-semibold text-center gap-3 mx-6 bg-black;
+  }
+
+  .footer-card {
+    @apply flex flex-col justify-start items-start space-y-3 text-justify;
+  }
+
+  .footer-title-landing {
+    @apply text-lg lg:text-2xl text-purple-900/80;
+  }
+
+  .footer-description-landing {
+    @apply text-[12px] lg:text-sm text-purple-900/80;
+  }
+  .footer-description-landing:hover {
+    @apply underline underline-offset-2 text-purple-800;
+  }
+  .footer-title {
+    @apply text-lg lg:text-2xl text-slate-100;
+  }
+
+  .footer-description {
+    @apply text-[12px] lg:text-sm text-slate-100;
+  }
+  .footer-description:hover {
+    @apply underline underline-offset-2 text-white;
+  }
+
+  .footer-links {
+    @apply space-x-5 flex;
+  }
+
+  .footer-link-landing {
+    @apply h-5 w-5 text-blue-900;
+  }
+  .footer-link {
+    @apply h-5 w-5 text-teal-400;
+  }
+
+  .footer-link-landing:hover {
+    @apply text-black;
+  }
+  .footer-link:hover {
+    @apply text-white;
+  }
+
+  .footer-divider {
+    @apply border border-slate-400 my-8;
+  }
+
+  .footer-bottom {
+    @apply flex items-center justify-between;
+  }
+
+  .footer-copyright {
+    @apply px-5 py-1 text-white;
+  }
+  .footer-copyright-landing {
+    @apply px-5 py-1 text-black;
+  }
+
+  .footer-rights {
+    @apply flex px-5 py-1 gap-1 justify-end text-white;
+  }
+  .footer-rights-landing {
+    @apply flex px-5 py-1 gap-1 justify-end text-black;
+  }
+
+  .footer-underline {
+    @apply underline text-purple-300;
+  }
+  .footer-underline:hover {
+    @apply text-purple-500;
+  }
+
+  .footer-underline-landing {
+    @apply underline text-purple-500;
+  }
+  .footer-underline-landing:hover {
+    @apply text-purple-300;
+  }
+}
+/*CSS LandingPage*/
+@layer components {
+  .home-page {
+    @apply flex flex-col items-center justify-center bg-gradient-to-br from-header/70 via-header/40 to-header/10;
+  }
+}
