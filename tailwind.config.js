@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 import ThemePlugin from './src/styles/theme'
 
 const config = {
