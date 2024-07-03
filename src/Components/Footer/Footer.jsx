@@ -6,7 +6,7 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
-import "../../styles/globals.css";
+import "../../css/globals.css";
 
 const Footer = () => {
   const pathname = window.location.pathname;

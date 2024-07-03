@@ -4,7 +4,7 @@ import { Button } from "../Button/Button";
 import { CiUser, CiLogin } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import logo from "../../images/logo 2.png";
-import "../../styles/globals.css";
+import "../../css/globals.css";
 
 const A = [
   { Label: "Inicio", href: "/" },

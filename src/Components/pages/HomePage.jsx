@@ -1,22 +1,22 @@
 import React from "react";
-import "../styles/globals.css";
-import { Button } from "../Components/Button/Button";
-import Card from "../Components/Card/index";
-import img3 from "../images/image 3.png";
-import img2 from "../images/image 2.png";
-import img5 from "../images/image 5.png";
-import Logo from "../images/logo 2.png";
-import Rect from "../images/Rectangle 4.png";
-import Disc from "../images/logo-discord-1024 1.png";
-import Perfil from "../images/Ellipse 11.png";
-import Wave from "../images/Vector (2).png";
+import "../../css/globals.css";
+import { Button } from "../Button/Button";
+import Card from "../Card/index";
+import img3 from "../../images/image 3.png";
+import img2 from "../../images/image 2.png";
+import img5 from "../../images/image 5.png";
+import Logo from "../../images/logo 2.png";
+import Rect from "../../images/Rectangle 4.png";
+import Disc from "../../images/logo-discord-1024 1.png";
+import Perfil from "../../images/Ellipse 11.png";
+import Wave from "../../images/Vector (2).png";
 import { BsLightning } from "react-icons/bs";
 import { RiYoutubeFill, RiUserLine } from "react-icons/ri";
 
 function HomePage() {
   return (
     <>
-      <div className='flex flex-col items-center justify-center bg-gradient-to-br from-header/70 via-header/40 to-header/10'>
+      <div className="flex flex-col items-center justify-center bg-gradient-to-br from-header/70 via-header/40 to-header/10">
         {/*Ajustar resolução de img*/}
         {/*Introdução */}
         <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-1 p-1 min-h-[80vh] w-11/12">
