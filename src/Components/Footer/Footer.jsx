@@ -11,6 +11,7 @@ import "../../css/globals.css";
 const Footer = () => {
   const pathname = window.location.pathname;
   const isHome = pathname === "/";
+  const isHidden = pathname === "/login" || pathname === "/signup" || pathname === "/LogIn" || pathname === "/SignUp";
 
   return (
     <>
@@ -22,7 +23,11 @@ const Footer = () => {
           className="w-full max-h-[100px]"
         />
       )}
-      <footer className={`${!isHome ? "footer" : "footer-landing"}`}>
+      <footer
+        className={`${
+          isHidden ? "hidden" : `${!isHome ? "footer" : "footer-landing"}`
+        }`}
+      >
         <div className={`${!isHome ? "footer-grid" : "footer-grid-landing"}`}>
           {/* UDDTEC */}
           <div className="footer-card col-span-4">
@@ -265,14 +270,14 @@ const Footer = () => {
           <span
             className={`${!isHome ? "footer-rights" : "footer-rights-landing"}`}
           >
-            <p>All Rights Reserved |</p>
+            <p>All Rights Reserved </p>
             <a
               href="/testes"
               className={`${
                 !isHome ? "footer-underline" : "footer-underline-landing"
               }`}
             >
-              Terms and Conditions |
+              Terms and Conditions 
             </a>
             <a
               href="/testes"

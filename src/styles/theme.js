@@ -4,7 +4,7 @@ const ThemePlugin = plugin(
   function ({ addBase }) {
     addBase({
       ":root": {
-        "--color-background": "30deg 0% 100%",
+        "--color-background": "225deg 14% 16%",
         "--color-foreground": "20deg 14% 4%",
         "--color-header": "208deg 98% 18%",
 
@@ -36,7 +36,7 @@ const ThemePlugin = plugin(
       },
 
       ".dark": {
-        "--color-background": "0deg 0% 0%",
+        "--color-background": "225deg 14% 16%",
         "--color-foreground": "60deg 9% 98%",
         "--color-header": "208deg 98% 18%",
 

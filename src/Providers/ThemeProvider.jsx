@@ -11,7 +11,7 @@ export const useTheme = () => {
   return context;
 };
 
-export const ThemeProvider = ({ children, defaultTheme = "light" }) => {
+export const ThemeProvider = ({ children, defaultTheme = "dark" }) => {
   const [theme, setTheme] = useState(() => {
     if (typeof localStorage !== "undefined") {
       const savedTheme = localStorage.getItem("theme");

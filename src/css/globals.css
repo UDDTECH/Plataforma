@@ -4,8 +4,11 @@
 
 /*CSS NAVBAR*/
 @layer components {
-  .navbar {
+  .navbar-landing {
     @apply flex items-center bg-gradient-to-br from-header/70 via-header/80 to-black p-4 rounded-b-sm border-b border-blue-800;
+  }
+  .navbar {
+    @apply flex items-center bg-gradient-to-b from-header/70 via-header/40 to-black p-4 rounded-b-sm border-b border-blue-800;
   }
   .navbar__container {
     @apply flex items-center justify-between w-full;
@@ -17,16 +20,16 @@
     @apply text-white font-bold text-sm lg:text-lg;
   }
   .navbar__toggle-button {
-    @apply bg-white rounded-full flex justify-end transition ease-in duration-150 gap-4 mr-5;
+    @apply bg-header border border-white rounded-full flex justify-end transition ease-in duration-150 gap-4 mr-5;
+  }
+  .navbar__toggle-button:hover {
+    @apply bg-header/50 border-cyan-200 text-cyan-200;
   }
   .navbar__toggle-button--hidden {
     @apply hidden;
   }
-  .navbar__toggle-button--active {
-    @apply rotate-180;
-  }
   .navbar__toggle-icon {
-    @apply h-5 w-5 text-black;
+    @apply h-5 w-5;
   }
   .navbar__items {
     @apply justify-end items-center gap-2 lg:gap-6 hidden md:flex;
@@ -44,10 +47,10 @@
     @apply py-3 inline-block w-full hover:underline hover:underline-offset-2;
   }
   .navbar__button {
-    @apply gap-1 bg-header text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
+    @apply bg-header w-full text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
   }
   .navbar__button--cadastro {
-    @apply gap-1 bg-blue-900 text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
+    @apply w-full bg-blue-900 text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
   }
   .navbar__icon {
     @apply h-5 w-6;
@@ -154,7 +157,7 @@
     @apply flex px-5 py-1 gap-1 justify-end text-white;
   }
   .footer-rights-landing {
-    @apply flex px-5 py-1 gap-1 justify-end text-black;
+    @apply flex-1 sm:flex px-5 py-1 gap-1 justify-end text-black ;
   }
 
   .footer-underline {

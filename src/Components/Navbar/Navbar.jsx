@@ -8,7 +8,7 @@ import "../../css/globals.css";
 
 const A = [
   { Label: "Inicio", href: "/" },
-  { Label: "Como Funciona", href: "/" },
+  { Label: "Como Funciona", href: "/LogIn" },
   { Label: "Artigos", href: "/" },
   { Label: "Quem Somos", href: "/" },
 ];
@@ -17,7 +17,12 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   const pathname = window.location.pathname;
   const isHome = pathname === "/";
-  const isInstituicao = pathname === "/testes";
+  const isInstituicao = pathname !== "/";
+  const isHidden =
+    pathname === "/login" ||
+    pathname === "/signup" ||
+    pathname === "/LogIn" ||
+    pathname === "/SignUp";
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,7 +38,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div
+        className={`${
+          isHidden ? "hidden" : `${isHome ? "navbar-landing" : "navbar"}`
+        }`}
+      >
         <div className="navbar__container">
           <div className="navbar__logo">
             <a href="/" className="navbar__logo-link">
@@ -45,9 +54,7 @@ const Navbar = () => {
             size="sm"
             variant={"none"}
             onClick={() => setShowNav(!showNav)}
-            className={`navbar__toggle-button md:navbar__toggle-button--hidden ${
-              showNav ? "navbar__toggle-button--active" : ""
-            }`}
+            className={`navbar__toggle-button md:navbar__toggle-button--hidden `}
           >
             <BsThreeDots className="navbar__toggle-icon" />
           </Button>
@@ -61,19 +68,23 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <Button size="default" variant="none" className="navbar__button">
-              <CiLogin className="navbar__icon" />
-              <p className="flex md:hidden lg:flex">Login</p>
-            </Button>
-            {isInstituicao && (
-              <Button
-                size="default"
-                variant="none"
-                className="navbar__button--cadastro"
-              >
-                <CiUser className="navbar__icon" />
-                <p className="flex md:hidden lg:flex">Cadastrar</p>
+            <a href={"/LogIn"}>
+              <Button size="default" variant="none" className="navbar__button">
+                <CiLogin className="navbar__icon" />
+                <p className="flex md:hidden lg:flex"> Login</p>
               </Button>
+            </a>
+            {isInstituicao && (
+              <a href={"/SignUp"}>
+                <Button
+                  size="default"
+                  variant="none"
+                  className="navbar__button--cadastro"
+                >
+                  <CiUser className="navbar__icon" />
+                  <p className="flex md:hidden lg:flex">Cadastrar</p>
+                </Button>{" "}
+              </a>
             )}
           </nav>
         </div>
@@ -86,19 +97,23 @@ const Navbar = () => {
       {showNav && (
         <nav className="navbar__hidden">
           <div className="navbar__hidden-container">
-            <Button size="default" variant="none" className="navbar__button">
-              <CiLogin className="navbar__icon" />
-              Login
-            </Button>
-            {isInstituicao && (
-              <Button
-                size="default"
-                variant="none"
-                className="navbar__button--cadastro"
-              >
-                <CiUser className="navbar__icon" />
-                Cadastrar
+            <a href={"/LogIn"}>
+              <Button variant="none" className="navbar__button">
+                <CiLogin className="navbar__icon" />
+                Login
               </Button>
+            </a>
+            {isInstituicao && (
+              <a href={"/SignUp"}>
+                <Button
+                  size="default"
+                  variant="none"
+                  className="navbar__button--cadastro"
+                >
+                  <CiUser className="navbar__icon" />
+                  Cadastrar
+                </Button>{" "}
+              </a>
             )}
             <hr className="navbar__divider" />
             <ul className="navbar__hidden-list">
