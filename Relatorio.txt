@@ -1,0 +1,18 @@
+Relatorio 11/07/2024
+
+Problemas:
+
+Erro: Comando não reconhecido ao iniciar a aplicação.
+Solução: Executado o comando npm install react-scripts --save, resolvendo o erro.
+
+Refatoração do Componente Navbar:
+
+Mudança na Nomenclatura: A variável que armazena os links da navbar foi renomeada para melhorar a clareza e a consistência do código.
+
+Melhorias de Interface:
+
+Efeito do Botão: O efeito dos botões foi atualizado para proporcionar uma melhor experiência visual.
+
+Tamanho da Fonte: Ajustado o tamanho das fontes para melhor legibilidade.
+
+Espaçamentos: Refinados os espaçamentos entre os elementos para um layout mais organizado e harmonioso.
