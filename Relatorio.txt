@@ -1,4 +1,4 @@
-Relatorio 11/07/2024
+Relatorio 10/07/2024
 
 Problemas:
 
@@ -16,3 +16,34 @@ Efeito do Botão: O efeito dos botões foi atualizado para proporcionar uma melh
 Tamanho da Fonte: Ajustado o tamanho das fontes para melhor legibilidade.
 
 Espaçamentos: Refinados os espaçamentos entre os elementos para um layout mais organizado e harmonioso.
+
+------------------------------------------------------------------------------------------------------------------------
+Relatório - 11/07/2024
+
+Mudanças na Página Inicial
+Durante o dia de hoje, foram realizadas várias atualizações significativas na página inicial do projeto, focando principalmente em melhorias visuais e estruturais. As principais alterações incluem:
+
+Seção Principal (Primeiro Bloco)
+
+Ajustes de Estilo:
+Modifiquei o estilo das fontes para melhor legibilidade e estética.
+Aumentei o tamanho das fontes para destacar informações importantes.
+Apliquei um tracking (espaçamento entre letras) específico para melhorar o espaçamento e o visual do texto.
+
+Organização e Comentários no Código:
+Introduzi comentários estratégicos para facilitar a compreensão e manutenção futuras do código.
+Refatorei o código para uma estrutura mais organizada e fácil de navegar.
+Seção de Imagens (Segundo Bloco)
+
+Redimensionamento de Imagens:
+Ajustei o tamanho das imagens para melhorar a adaptação ao layout da página.
+As imagens agora estão alinhadas de acordo com as dimensões especificadas, garantindo consistência visual.
+Seção de Logos e Discord (Terceiro Bloco)
+
+Estilo e Cores:
+Implementei uma cor de fundo específica (#0C1821) para um destaque visual mais impactante.
+Alterei o estilo do botão para utilizar uma fonte semibold (font-medium) e cor branca (text-white), proporcionando maior contraste e legibilidade.
+
+Adição de Informações Adicionais:
+Incluí informações complementares sobre exercícios, vídeos aulas, quiz e materiais de apoio.
+Estas informações foram organizadas de forma clara e concisa para destacar os benefícios da plataforma.

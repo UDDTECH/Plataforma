@@ -55,6 +55,8 @@
   .navbar__link {
     @apply py-3 inline-block w-full hover:underline hover:underline-offset-2;
     margin: 0 0.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
   }
 
   /* Botões de ação */
@@ -109,6 +111,12 @@
   .navbar__hidden-link {
     @apply py-3 inline-block w-full hover:bg-header px-3 rounded-md;
   }
+}
+
+/* Pages configurações */
+
+.titulo__teste{
+  letter-spacing: 40%;
 }
 
 /*CSS FOOTER*/

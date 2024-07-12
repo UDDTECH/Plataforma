@@ -7,6 +7,13 @@ const config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
+  theme: {
+    extend: {
+      letterSpacing: {
+        '38': '0.38em', 
+      }
+    }
+  },
   plugins: [ThemePlugin],
 };
 

@@ -16,35 +16,41 @@ import { RiYoutubeFill, RiUserLine } from "react-icons/ri";
 function HomePage() {
   return (
     <>
+    
       <div className="flex flex-col items-center justify-center bg-gradient-to-br from-header/70 via-header/40 to-header/10">
         {/*Ajustar resolução de img*/}
         {/*Introdução */}
+
+        {/* Container principal usando grid layout */}
         <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-1 p-1 min-h-[80vh] w-11/12">
+         {/* Primeiro cartão */}
           <Card.Root className="col-span-4 md:col-span-3 lg:md:col-span-4 text-justify bg-inherit p-5 space-y-5 ">
-            <Card.Title className=" flex-1 text-[40px] md:text-[50px] lg:text-[65px] xl:text-[80px] text-cyan-200">
-              CONHEÇA A <span className="text-teal-800"> NOSSA COMUNIDADE</span>
+            <Card.Title className="flex-1 text-[40px] md:text-[50px] lg:text-[65px] xl:text-[50px] text-cyan-200  tracking-38">
+              CONHEÇA A <span className="text-teal-800">NOSSA COMUNIDADE</span>
             </Card.Title>
-            <Card.Description className="flex-1 items-center gap-x-1 text-[20px] lg:text-[25px]">
+            <Card.Description className="flex-1 items-center gap-x-1 text-[21px] lg:text-[25px]">
               Bem-vindo à
-              <span className="font-semibold text-teal-800">
+              <span className="font-semibold text-teal-800 lg:text-[21px]">
                 {" "}
                 UDDTECH COMMUNITY.
               </span>{" "}
               Somos um grupo apaixonado por tecnologia, conectando estudantes e
               entusiadas da área de Tecnologia da Informação em um
-              <span className="font-semibold text-teal-800">
+              <span className="font-semibold text-teal-800 lg:text-[21px]">
                 {" "}
                 ambiente virtual.
               </span>
             </Card.Description>
-            <Card.Description className="flex-1 items-center gap-x-1 text-[20px] lg:text-[25px]">
+            <Card.Description className="flex-1 items-center gap-x-1 text-[21px] lg:text-[21px]">
               Nossa Missão é Promover a troca de apoio mútuo e o crescimento
               Profissional em meio à modalidade de{" "}
-              <span className="font-semibold text-teal-800">
+              <span className="font-semibold text-teal-800 lg:text-[21px]">
                 ensino a distância.
               </span>
             </Card.Description>
           </Card.Root>
+           
+         {/* Segundo cartão contendo imagens */}
           <Card.Root className="col-span-4 md:col-span-3 lg:md:col-span-2 grid grid-rows-2 text-justify bg-inherit p-5 space-y-5 ">
             <img
               src={img3}
@@ -52,7 +58,7 @@ function HomePage() {
               width={300}
               objectFit="contain"
               priority
-              className="w-fit md:w-[250px] lg:w-[275px] xl:w-[300px] 2xl:w-[400px] ml-auto rounded-md border p-2 border-cyan-400/40"
+              className="w-fit md:w-[250px] lg:w-[275px] xl:w-[369px] 2xl:w-[400px] ml-auto rounded-md border p-2 border-cyan-400/40"
             />
             <img
               src={img2}
@@ -60,14 +66,19 @@ function HomePage() {
               width={300}
               objectFit="contain"
               priority
-              className="w-fit md:w-[250px] lg:w-[275px]  xl:w-[300px] 2xl:w-[400px] mr-auto  rounded-md border p-2 border-cyan-400/40"
+              className="w-fit md:w-[250px] lg:w-[275px]  xl:w-[369px] 2xl:w-[400px] mr-auto  rounded-md border p-2 border-cyan-400/40"
             />
           </Card.Root>
         </div>
+        {/* Linha horizontal para separar seções */}
         <hr className="border border-teal-900/80 my-10 w-11/12 " />
-        {/*Logos / Discord */}
+
+        {/* Container principal para logos e informações */}
         <div className="flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full">
+        {/* Grid para organizar os elementos */}
           <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-y-20  p-1 w-10/12 ">
+
+           {/* Primeiro cartão com logos */}
             <Card.Root className=" items-center justify-center flex flex-col mx-auto">
               <img
                 src={Rect}
@@ -77,17 +88,21 @@ function HomePage() {
               />
               <img src={Logo} alt="Logo" width={200} className="z-10" />
             </Card.Root>
+
+            {/* Segundo cartão com Discord */}
             <Card.Root className="items-center justify-center flex flex-col gap-y-2 mx-auto">
               <img src={Disc} alt="Disc" width={200} />
               <Button
                 size={"lg"}
                 variant={"link"}
-                className=" bg-indigo-300/90 rounded-md hover:bg-indigo-300 font-semibold w-[150px] md:w-[200px] text-blue-600"
+                className=" bg-[#0C1821] rounded-md hover:bg-[#344955] font-medium w-[150px] md:w-[200px] text-white"
               >
                 <a href={"/"}>Entre no Discord</a>
               </Button>
             </Card.Root>
-            <Card.Root className="text-[12px] md:text-sm flex flex-col text-justify mx-auto">
+
+            {/* Terceiro cartão com informações adicionais */}
+            <Card.Root className="text-[20px] md:text-sm flex flex-col text-justify mx-auto gap-y-1">
               <Card.Description>
                 <span className="text-blue-400">+150</span> Execícios;
               </Card.Description>
@@ -105,6 +120,7 @@ function HomePage() {
           </div>
         </div>
         <hr className="border border-teal-900/80 my-10 w-11/12 " />
+
         {/*Quem Somos */}
         <div className="flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full">
           <h3 className="text-teal-600 text-[30px] md:text-[45px] lg:text-[55px] xl:text-[70px]">
