@@ -16,17 +16,17 @@ import { RiYoutubeFill, RiUserLine } from "react-icons/ri";
 function HomePage() {
   return (
     <>
-    
       <div className="flex flex-col items-center justify-center bg-gradient-to-br from-header/70 via-header/40 to-header/10">
         {/*Ajustar resolução de img*/}
         {/*Introdução */}
 
         {/* Container principal usando grid layout */}
-        <div className="grid grid-cols-4 md:grid-cols-6 items-center gap-1 p-1 min-h-[80vh] w-11/12">
-         {/* Primeiro cartão */}
-          <Card.Root className="col-span-4 md:col-span-3 lg:md:col-span-4 text-justify bg-inherit p-5 space-y-5 ">
-            <Card.Title className="flex-1 text-[40px] md:text-[50px] lg:text-[65px] xl:text-[50px] text-cyan-200  tracking-38">
-              CONHEÇA A <span className="text-teal-800">NOSSA COMUNIDADE</span>
+        <div className="grid grid-cols-1 md:grid-cols-6 items-center gap-1 p-1 min-h-[80vh] w-11/12">
+          {/* Primeiro cartão */}
+          <Card.Root className="col-span-1 md:col-span-3 lg:col-span-4 text-justify bg-inherit  space-y-5">
+            <Card.Title className="flex-1 font-poppins font-medium text-[40px] md:text-[50px] lg:text-[65px] xl:text-[50px] text-cyan-200 tracking-[38%] leading-[60px]">
+              CONHEÇA <span className="text-cyan-200 mx-2">A</span>{" "}
+              <span className="text-teal-800">NOSSA COMUNIDADE</span>
             </Card.Title>
             <Card.Description className="flex-1 items-center gap-x-1 text-[21px] lg:text-[25px]">
               Bem-vindo à
@@ -35,7 +35,7 @@ function HomePage() {
                 UDDTECH COMMUNITY.
               </span>{" "}
               Somos um grupo apaixonado por tecnologia, conectando estudantes e
-              entusiadas da área de Tecnologia da Informação em um
+              entusiastas da área de Tecnologia da Informação em um
               <span className="font-semibold text-teal-800 lg:text-[21px]">
                 {" "}
                 ambiente virtual.
@@ -49,36 +49,30 @@ function HomePage() {
               </span>
             </Card.Description>
           </Card.Root>
-           
-         {/* Segundo cartão contendo imagens */}
-          <Card.Root className="col-span-4 md:col-span-3 lg:md:col-span-2 grid grid-rows-2 text-justify bg-inherit p-5 space-y-5 ">
+
+          {/* Segundo cartão contendo imagens */}
+          <Card.Root className="col-span-1 md:col-span-3 lg:col-span-2 grid grid-rows-2 text-justify bg-inherit p-5 space-y-5">
             <img
               src={img3}
               alt="img 3"
-              width={300}
-              objectFit="contain"
-              priority
               className="w-fit md:w-[250px] lg:w-[275px] xl:w-[369px] 2xl:w-[400px] ml-auto rounded-md border p-2 border-cyan-400/40"
             />
             <img
               src={img2}
               alt="img 2"
-              width={300}
-              objectFit="contain"
-              priority
-              className="w-fit md:w-[250px] lg:w-[275px]  xl:w-[369px] 2xl:w-[400px] mr-auto  rounded-md border p-2 border-cyan-400/40"
+              className="w-fit md:w-[250px] lg:w-[275px] xl:w-[369px] 2xl:w-[400px] mr-auto rounded-md border p-2 border-cyan-400/40"
             />
           </Card.Root>
         </div>
+
         {/* Linha horizontal para separar seções */}
         <hr className="border border-teal-900/80 my-10 w-11/12 " />
 
         {/* Container principal para logos e informações */}
         <div className="flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full">
-        {/* Grid para organizar os elementos */}
+          {/* Grid para organizar os elementos */}
           <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-y-20  p-1 w-10/12 ">
-
-           {/* Primeiro cartão com logos */}
+            {/* Primeiro cartão com logos */}
             <Card.Root className=" items-center justify-center flex flex-col mx-auto">
               <img
                 src={Rect}
@@ -103,17 +97,17 @@ function HomePage() {
 
             {/* Terceiro cartão com informações adicionais */}
             <Card.Root className="text-[20px] md:text-sm flex flex-col text-justify mx-auto gap-y-1">
-              <Card.Description>
-                <span className="text-blue-400">+150</span> Execícios;
+              <Card.Description className="font-montserrat text-[20px] font-normal leading-[24.38px] text-left">
+                <span className="text-blue-400 font-bold">+150</span> Exercícios;
               </Card.Description>
-              <Card.Description>
-                <span className="text-blue-400">+500</span> Videos aulas na
+              <Card.Description className="font-montserrat text-[20px] font-normal leading-[24.38px] text-left">
+                <span className="text-blue-400 font-bold">+500</span> Vídeos aulas na
                 plataforma;
               </Card.Description>
-              <Card.Description>
+              <Card.Description className="font-montserrat text-[20px] font-normal leading-[24.38px] text-left">
                 Quiz para poder treinar seus conhecimentos;
               </Card.Description>
-              <Card.Description>
+              <Card.Description className="font-montserrat text-[20px] font-normal leading-[24.38px] text-left">
                 Materiais de apoio para se aprofundar e muito mais.
               </Card.Description>
             </Card.Root>
@@ -122,49 +116,69 @@ function HomePage() {
         <hr className="border border-teal-900/80 my-10 w-11/12 " />
 
         {/*Quem Somos */}
-        <div className="flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full">
-          <h3 className="text-teal-600 text-[30px] md:text-[45px] lg:text-[55px] xl:text-[70px]">
+        <div className="flex flex-col text-center items-center my-10 gap-3 p-1 py-5 w-full">
+          <h3 className="text-white text-[30px] md:text-[45px] lg:text-[55px] xl:text-[70px]">
             Quem somos?
           </h3>
-          <p className="gap-x-1 text-sm lg:text-[20px] w-2/4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            dignissimos eaque unde! Nisi animi, vel modi, iusto dolor porro
-            similique non omnis quo atque doloremque quod commodi. Sit, quidem
-            laborum.
+          <p className="gap-x-1 gap-y-5 text-base lg:text-[18px] w-full md:w-3/4 font-normal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+            delectus, reiciendis sint consectetur laborum eos rerum, et totam
+            quas nobis cupiditate vel recusandae, vero aspernatur ab at maxime
+            velit! Error? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Eaque accusantium reiciendis rem cum, ex consequuntur
+            voluptate? Culpa quibusdam repellendus magnam? Unde neque
+            praesentium error molestias minus aperiam dignissimos expedita eius.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
+            magni, porro illo omnis esse, suscipit aspernatur aliquam ea labore
+            repellat deleniti! At molestias laboriosam, impedit ad harum eveniet
+            magnam quo!
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 gap-x-10 md:w-3/5 mt-5 items-center justify-center">
-            <Card.Root className="flex flex-col items-center justify-center bg-gradient-to-b from-inherit/80 to-inherit p-5 gap-y-5 w-full max-w-[300px] min-w-[200px] md:min-w-min border-x border-b border-teal-900 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-x-10 w-full md:w-3/5 mt-5 items-center justify-center">
+            <Card.Root className="flex flex-col items-center justify-center from-inherit/80 to-inherit p-5 gap-y-5 w-full mx-auto">
               <img
                 src={Perfil}
                 alt="Daniel"
                 width={100}
-                className="border-2 rounded-full border-blue-500 p-1"
+                className="border-2 rounded-full border-blue-500 p-1 w-[243px]"
               />
-              <Card.Description>Daniel Oliveira</Card.Description>
-              <Card.Footer>Software Engennier</Card.Footer>
+              <Card.Description className="text-white text-[17px] lg:text-[24px] font-bold">
+                Daniel Oliveira
+              </Card.Description>
+              <Card.Footer className="text-white text-[17px] lg:text-[18px] font-medium">
+                Software Engineer
+              </Card.Footer>
             </Card.Root>
-            <Card.Root className="flex flex-col items-center justify-center bg-gradient-to-b from-inherit/80 to-inherit p-5 gap-y-5 w-full max-w-[300px] min-w-[200px] md:min-w-min border-x border-b border-teal-900 mx-auto">
+            <Card.Root className="flex flex-col items-center justify-center from-inherit/80 to-inherit p-5 gap-y-5 w-full mx-auto">
               <img
                 src={Perfil}
                 alt="Daniel"
                 width={100}
-                className="border-2 rounded-full border-blue-500 p-1"
+                className="border-2 rounded-full border-blue-500 p-1 w-[243px]"
               />
-              <Card.Description>Daniel Oliveira</Card.Description>
-              <Card.Footer>Software Engennier</Card.Footer>
+              <Card.Description className="text-white text-[17px] lg:text-[24px] font-bold">
+                Daniel Oliveira
+              </Card.Description>
+              <Card.Footer className="text-white text-[17px] lg:text-[18px] font-medium">
+                Software Engineer
+              </Card.Footer>
             </Card.Root>
-            <Card.Root className="flex flex-col items-center justify-center bg-gradient-to-b from-inherit/80 to-inherit p-5 gap-y-5 w-full max-w-[300px] min-w-[200px] md:min-w-min border-x border-b border-teal-900 mx-auto">
+            <Card.Root className="flex flex-col items-center justify-center from-inherit/80 to-inherit p-5 gap-y-5 w-full mx-auto">
               <img
                 src={Perfil}
                 alt="Daniel"
                 width={100}
-                className="border-2 rounded-full border-blue-500 p-1"
+                className="border-2 rounded-full border-blue-500 p-1 w-[243px]"
               />
-              <Card.Description>Daniel Oliveira</Card.Description>
-              <Card.Footer>Software Engennier</Card.Footer>
+              <Card.Description className="text-white text-[17px] lg:text-[24px] font-bold">
+                Daniel Oliveira
+              </Card.Description>
+              <Card.Footer className="text-white text-[17px] lg:text-[18px] font-medium">
+                Software Engineer
+              </Card.Footer>
             </Card.Root>
           </div>
         </div>
+
         {/*img */}
         <img
           src={Wave}

@@ -18,7 +18,7 @@ Tamanho da Fonte: Ajustado o tamanho das fontes para melhor legibilidade.
 Espaçamentos: Refinados os espaçamentos entre os elementos para um layout mais organizado e harmonioso.
 
 ------------------------------------------------------------------------------------------------------------------------
-Relatório - 11/07/2024
+Relatório - 11/07/2024 Manutenção
 
 Mudanças na Página Inicial
 Durante o dia de hoje, foram realizadas várias atualizações significativas na página inicial do projeto, focando principalmente em melhorias visuais e estruturais. As principais alterações incluem:
@@ -47,3 +47,20 @@ Alterei o estilo do botão para utilizar uma fonte semibold (font-medium) e cor 
 Adição de Informações Adicionais:
 Incluí informações complementares sobre exercícios, vídeos aulas, quiz e materiais de apoio.
 Estas informações foram organizadas de forma clara e concisa para destacar os benefícios da plataforma.
+======================================================================================
+
+Relatório de Manutenção - 15/07/2024
+
+Modificações Realizadas na Página
+Responsividade:
+
+Adaptadas todas as seções da página para melhor responsividade em diferentes tamanhos de tela.
+Implementação de grids flexíveis e ajuste de classes de Tailwind CSS para garantir que os elementos se comportem adequadamente em dispositivos móveis, tablets e desktops.
+Alterações em Tipografia:
+
+Atualização de fontes para garantir uma melhor legibilidade e estética visual.
+Ajustes no tamanho da fonte e espaçamento entre letras em diferentes dispositivos.
+Mudanças nos Cards:
+
+Redesign dos cards para melhorar a apresentação das informações.
+Ajustes nas dimensões e alinhamentos para uma aparência mais harmoniosa em diversas resoluções de tela.
