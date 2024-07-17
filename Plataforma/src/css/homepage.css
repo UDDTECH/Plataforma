@@ -1,0 +1,47 @@
+
+/* Estilos do card customizado */
+
+
+.custom-card {
+  border-radius: 75px 75px 250px 250px;
+  background: linear-gradient(135deg, #3a6073 0%, #0c1821 100%);
+}
+
+.text-custom-color-titulo{
+  color: #44606e;
+  font-weight: 600;
+  font-size: 70px;
+}
+
+.text-custom-color-subtitulo{
+  color: #44606e;
+  font-size: 2.5rem;
+  width: 60%;
+  line-height: 1.5;
+}
+
+
+
+
+
+/* Fonte Roboto Bold */
+.font-roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Estilos do footer */
+.footer-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 20.13px;
+  text-align: center;
+  color: #ffffff;
+}
+

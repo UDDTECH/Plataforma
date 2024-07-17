@@ -113,10 +113,24 @@
   }
 }
 
-/* Pages configurações */
+/* CSS HOMEPAGE */
 
-.titulo__teste{
-  letter-spacing: 40%;
+@layer components {
+  .text-custom-color-titulo{
+    @apply text-blue-600;
+  }
+
+  .custom-card {
+    @apply p-4 rounded-lg shadow-md;
+  }
+  .custom-card-titulo {
+    @apply text-center sm:text-[21px] lg:text-[25px];
+  }
+  .custom-card-conteudo {
+    @apply text-center sm:text-[16px] lg:text-[18px];
+  }
+
+  
 }
 
 /*CSS FOOTER*/

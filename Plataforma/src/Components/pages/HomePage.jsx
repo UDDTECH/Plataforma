@@ -1,5 +1,7 @@
+
 import React from "react";
 import "../../css/globals.css";
+import "../../css/homepage.css";
 import { Button } from "../Button/Button";
 import Card from "../Card/index";
 import img3 from "../../images/image 3.png";
@@ -189,21 +191,21 @@ function HomePage() {
         />
         {/*img */}
         {/* Como Funciona*/}
-        <div className="flex flex-col text-center items-center gap-3 p-1 py-10 gap-y-5 bg-white w-full">
-          <h3 className="text-teal-500 text-[20px] md:text-[30px] lg:text-[40px] ">
+        <div className="flex flex-col text-center font-bold items-center gap-3 p-1 py-10 gap-y-5 bg-white w-full">
+          <h3 className="text-custom-color-titulo text-[20px] md:text-[30px] lg:text-[40px] ">
             Como funciona?
           </h3>
-          <p className="text-teal-700 gap-x-1 text-sm lg:text-[20px] w-3/4 md:w-1/2">
+          <p className="text-custom-color-subtitulo gap-x-1 text-sm lg:text-[20px] w-3/4 md:w-1/2 font-medium">
             A Plataforma UDDTECH é uma plataforma completa para você começar ou
             se aprofundar na área de Desenvolvimento Web.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:w-8/12 my-5 items-center justify-center bg-gradient-to-l from-white via-blue-300  to-white py-10 text-justify rounded-md">
-            <Card.Root className="flex flex-col items-center bg-gradient-to-br from-teal-950/80 via-teal/900/80 to-teal-950 p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:w-8/12 my-5 items-center justify-center py-10 text-justify rounded-md">
+            <Card.Root className="custom-card flex flex-col items-center p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto">
               <RiYoutubeFill className="w-[80px] h-[60px] md:w-[120px] md:h-[100px]" />
-              <Card.Title className="sm:text-[11px] lg:text-lg text-center">
+              <Card.Title className="custom-card-titulo font-bold text-white">
                 Conteudo Gravado
               </Card.Title>
-              <Card.Footer>
+              <Card.Footer className="custom-card-conteudo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis alias similique quo ad dolore illum non saepe odit
                 voluptates officiis doloribus molestias perferendis quos, amet
@@ -211,17 +213,17 @@ function HomePage() {
               </Card.Footer>
               <Button
                 variant={"link"}
-                className="bg-gradient-to-br from-green-700 via-green-600 to-green-800 text-white border-2 border-green-500 shadow-inner shadow-green-300 px-8 md:px-12 hover:shadow-green-200 hover:border-green-400 hover:from-green-500"
+                className="w-[180px] h-[75px] rounded-[20px_20px_60px_60px] text-black bg-white text-[2.5rem] font-medium sm:text-[2rem] md:text-[2.5rem]"
               >
                 <a href={"/teste"}>Acessar</a>
               </Button>
             </Card.Root>
-            <Card.Root className="flex flex-col items-center bg-gradient-to-br from-teal-950/80 via-teal/900/80 to-teal-950 p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto">
+            <Card.Root className="custom-card flex flex-col items-center p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto">
               <BsLightning className="w-[80px] h-[60px] md:w-[120px] md:h-[100px]" />
-              <Card.Title className="sm:text-[11px] lg:text-lg text-center">
+              <Card.Title className="custom-card-titulo font-bold  text-white">
                 Exercícios
               </Card.Title>
-              <Card.Footer>
+              <Card.Footer className="custom-card-conteudo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis alias similique quo ad dolore illum non saepe odit
                 voluptates officiis doloribus molestias perferendis quos, amet
@@ -229,17 +231,17 @@ function HomePage() {
               </Card.Footer>
               <Button
                 variant={"link"}
-                className="bg-gradient-to-br from-green-700 via-green-600 to-green-800 text-white border-2 border-green-500 shadow-inner shadow-green-300 px-8 md:px-12 hover:shadow-green-200 hover:border-green-400 hover:from-green-500"
+                className="w-[180px] h-[75px] rounded-[20px_20px_60px_60px] text-black bg-white text-[2.5rem] font-medium sm:text-[2rem] md:text-[2.5rem]"
               >
                 <a href={"/teste"}>Iniciar</a>
               </Button>
             </Card.Root>
-            <Card.Root className="flex flex-col items-center bg-gradient-to-br from-teal-950/80 via-teal/900/80 to-teal-950 p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto">
+            <Card.Root className="custom-card flex flex-col items-center p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto">
               <RiUserLine className="w-[80px] h-[60px] md:w-[120px] md:h-[100px]" />
-              <Card.Title className="sm:text-[11px] lg:text-lg text-center">
+              <Card.Title className="custom-card-titulo font-bold  text-white">
                 Networking
               </Card.Title>
-              <Card.Footer>
+              <Card.Footer className="custom-card-conteudo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis alias similique quo ad dolore illum non saepe odit
                 voluptates officiis doloribus molestias perferendis quos, amet
@@ -247,7 +249,7 @@ function HomePage() {
               </Card.Footer>
               <Button
                 variant={"link"}
-                className="bg-gradient-to-br from-green-700 via-green-600 to-green-800 text-white border-2 border-green-500 shadow-inner shadow-green-300 px-8 md:px-12 hover:shadow-green-200 hover:border-green-400 hover:from-green-400"
+                className="w-[180px] h-[75px] rounded-[20px_20px_60px_60px] text-black bg-white text-[2.5rem] font-medium sm:text-[2rem] md:text-[2.5rem]"
               >
                 <a href={"/teste"}>Acessar</a>
               </Button>
