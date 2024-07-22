@@ -4,9 +4,11 @@
 
 /*CSS NAVBAR*/
 @layer components {
-  /* Navbar principal */
-  .navbar {
+  .navbar-landing {
     @apply flex items-center bg-gradient-to-br from-header/70 via-header/80 to-black p-4 rounded-b-sm border-b border-blue-800;
+  }
+  .navbar {
+    @apply flex items-center bg-gradient-to-b from-header/70 via-header/40 to-black p-4 rounded-b-sm border-b border-blue-800;
   }
   .navbar__container {
     @apply flex items-center justify-between w-full;
@@ -17,185 +19,121 @@
   .navbar__logo-link {
     @apply text-white font-bold text-sm lg:text-lg;
   }
-
-  /* Botão para alternar menu móvel */
   .navbar__toggle-button {
-    @apply bg-white rounded-full flex justify-end transition ease-in duration-150 gap-4 mr-5;
+    @apply bg-header border border-white text-white rounded-full flex justify-end transition ease-in duration-150 gap-4 mr-5;
   }
-
+  .navbar__toggle-button:hover {
+    @apply bg-header/50 border-cyan-200 text-cyan-200;
+  }
   .navbar__toggle-button--hidden {
     @apply hidden;
   }
-
-  .navbar__toggle-button--active {
-    @apply rotate-180;
-  }
-
   .navbar__toggle-icon {
-    @apply h-5 w-5 text-black;
+    @apply h-5 w-5;
   }
-
-  /* Itens da navbar principal */
   .navbar__items {
     @apply justify-end items-center gap-2 lg:gap-6 hidden md:flex;
   }
-
   .navbar__list {
     @apply flex text-white text-sm lg:text-lg xl:text-lg space-x-5 md:space-x-3;
   }
-
   .navbar__list--hidden {
     @apply hidden;
   }
-
   .navbar__item {
     @apply flex items-center;
   }
-
   .navbar__link {
     @apply py-3 inline-block w-full hover:underline hover:underline-offset-2;
-    margin: 0 0.5rem;
-    font-weight: 500;
-    font-size: 1.6rem;
   }
-
-  /* Botões de ação */
   .navbar__button {
-    @apply gap-1 bg-header text-white hover:bg-header/70 text-lg rounded-lg border border-white/80;
-    text-align: center;
-    margin: 0 2rem;
+    @apply bg-header w-full text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
   }
-
-  .navbar__button:hover {
-    border: solid 1px #ffff;
-    transition: 0.1s linear;
-  }
-
   .navbar__button--cadastro {
-    @apply gap-1 bg-blue-900 text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
+    @apply w-full bg-blue-900 text-white hover:bg-header/70 text-lg rounded-lg border border-white/80 hover:font-semibold;
   }
-
   .navbar__icon {
     @apply h-5 w-6;
   }
-
   .navbar__theme-switcher {
     @apply flex justify-end px-1;
   }
-
-  /* Navbar móvel (menu escondido) */
   .navbar__hidden {
     @apply absolute flex md:hidden w-full justify-end;
   }
-
   .navbar__hidden--visible {
     @apply px-3;
   }
-
   .navbar__hidden-container {
     @apply flex flex-col w-fit py-2 bg-gradient-to-r from-header gap-y-1 to-black px-4 rounded-lg border border-blue-800/80;
   }
-
   .navbar__divider {
     @apply fill-black my-2;
   }
-
   .navbar__hidden-list {
     @apply flex flex-col text-sm justify-end text-white;
   }
-
   .navbar__hidden-item {
     @apply flex items-center space-x-2;
   }
-
   .navbar__hidden-link {
     @apply py-3 inline-block w-full hover:bg-header px-3 rounded-md;
   }
 }
-
-/* CSS HOMEPAGE */
-
-@layer components {
-  .text-custom-color-titulo{
-    @apply text-blue-600;
-  }
-
-  .custom-card {
-    @apply p-4 rounded-lg shadow-md;
-  }
-  .custom-card-titulo {
-    @apply text-center sm:text-[21px] lg:text-[25px];
-  }
-  .custom-card-conteudo {
-    @apply text-center sm:text-[16px] lg:text-[18px];
-  }
-
-  
-}
-
 /*CSS FOOTER*/
 @layer components {
-  /* Rodapé padrão e landing page */
   .footer-landing {
     @apply static w-full z-0 bottom-0 rounded-sm pb-6 px-4 bg-white;
   }
   .footer {
-    @apply static w-full z-0 bottom-0 rounded-sm pb-6 px-4 bg-black pt-5;
+    @apply static w-full z-0 bottom-0 rounded-sm pb-6 px-4 pt-5;
   }
-
   .footer-grid-landing {
-    @apply grid grid-cols-6 md:grid-cols-12 font-semibold text-center gap-3 mx-6 bg-white;
+    @apply grid grid-cols-6 md:grid-cols-12 font-semibold text-center gap-3 md:gap-4 lg:gap-6 mx-6 bg-white;
   }
   .footer-grid {
-    @apply grid grid-cols-6 md:grid-cols-12 font-semibold text-center gap-3 mx-6 bg-black;
+    @apply grid grid-cols-6 md:grid-cols-12 font-semibold text-center gap-3 md:gap-4 lg:gap-6 mx-6 bg-black;
   }
 
   .footer-card {
-    @apply flex flex-col justify-start items-start space-y-3 text-justify;
+    @apply flex flex-col justify-start items-start space-y-3 md:space-y-4 text-justify;
   }
 
-  /* Títulos e descrições */
   .footer-title-landing {
-    @apply text-lg lg:text-2xl text-purple-900/80;
+    @apply text-lg md:text-xl lg:text-2xl text-[#170F49];
   }
 
   .footer-description-landing {
-    @apply text-[12px] lg:text-sm text-purple-900/80;
+    @apply text-[12px] md:text-sm lg:text-base text-[#6F6C90];
   }
-
   .footer-description-landing:hover {
     @apply underline underline-offset-2 text-purple-800;
   }
-
   .footer-title {
-    @apply text-lg lg:text-2xl text-slate-100;
+    @apply text-lg md:text-xl lg:text-2xl text-slate-100;
   }
 
   .footer-description {
-    @apply text-[12px] lg:text-sm text-slate-100;
+    @apply text-[12px] md:text-sm lg:text-base text-slate-100;
   }
-
   .footer-description:hover {
     @apply underline underline-offset-2 text-white;
   }
 
-  /* Links do rodapé */
   .footer-links {
-    @apply space-x-5 flex;
+    @apply space-x-5 md:space-x-6 lg:space-x-8 flex;
   }
 
   .footer-link-landing {
-    @apply h-5 w-5 text-blue-900;
+    @apply h-5 w-5 md:h-6 md:w-6 text-blue-900;
   }
-
   .footer-link {
-    @apply h-5 w-5 text-teal-400;
+    @apply h-5 w-5 md:h-6 md:w-6 text-teal-400;
   }
 
   .footer-link-landing:hover {
     @apply text-black;
   }
-
   .footer-link:hover {
     @apply text-white;
   }
@@ -204,7 +142,6 @@
     @apply border border-slate-400 my-8;
   }
 
-  /* Seção inferior do rodapé */
   .footer-bottom {
     @apply flex items-center justify-between;
   }
@@ -212,24 +149,20 @@
   .footer-copyright {
     @apply px-5 py-1 text-white;
   }
-
   .footer-copyright-landing {
     @apply px-5 py-1 text-black;
   }
 
   .footer-rights {
-    @apply flex px-5 py-1 gap-1 justify-end text-white;
+    @apply flex px-5 py-1 gap-1 md:gap-2 justify-end text-white;
   }
-
   .footer-rights-landing {
-    @apply flex px-5 py-1 gap-1 justify-end text-black;
+    @apply flex-1 sm:flex px-5 py-1 gap-1 md:gap-2 justify-end text-black;
   }
 
-  /* Links sublinhados */
   .footer-underline {
     @apply underline text-purple-300;
   }
-
   .footer-underline:hover {
     @apply text-purple-500;
   }
@@ -237,7 +170,6 @@
   .footer-underline-landing {
     @apply underline text-purple-500;
   }
-
   .footer-underline-landing:hover {
     @apply text-purple-300;
   }
@@ -247,5 +179,227 @@
 @layer components {
   .home-page {
     @apply flex flex-col items-center justify-center bg-gradient-to-br from-header/70 via-header/40 to-header/10;
+  }
+  .intro-section {
+    @apply grid grid-cols-4 md:grid-cols-6 items-center gap-1 p-1 min-h-[80vh] w-11/12;
+  }
+  .intro-card-1 {
+    @apply col-span-4 md:col-span-3 lg:md:col-span-4 text-justify bg-inherit p-5 space-y-5;
+  }
+  .intro-card-1-title {
+    @apply flex-1 text-[40px] md:text-[50px] lg:text-[65px] xl:text-[80px] text-cyan-200;
+  }
+  .intro-span-title {
+    @apply text-teal-800;
+  }
+  .intro-card-1-description {
+    @apply flex-1 items-center gap-x-1 text-[20px] lg:text-[25px];
+  }
+  .intro-span-description {
+    @apply font-semibold text-teal-800;
+  }
+  .intro-card-2 {
+    @apply col-span-4 md:col-span-3 lg:md:col-span-2 grid grid-rows-2 text-justify bg-inherit p-5 space-y-5;
+  }
+  .intro-card-2-img-1 {
+    @apply w-fit md:w-[250px] lg:w-[275px] xl:w-[300px] 2xl:w-[400px] ml-auto rounded-md border p-2 border-cyan-400/40;
+  }
+  .intro-card-2-img-2 {
+    @apply w-fit md:w-[250px] lg:w-[275px]  xl:w-[300px] 2xl:w-[400px] mr-auto  rounded-md border p-2 border-cyan-400/40;
+  }
+  .divider {
+    @apply border border-teal-900/80 my-10 w-11/12;
+  }
+  .logos-section {
+    @apply flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full;
+  }
+  .logos-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-y-20  p-1 w-10/12;
+  }
+  .logos-card-1 {
+    @apply items-center justify-center flex flex-col mx-auto;
+  }
+  .logos-card-2 {
+    @apply items-center justify-center flex flex-col gap-y-2 mx-auto;
+  }
+  .logos-card-2-button {
+    @apply bg-indigo-300/90 rounded-md font-semibold w-[150px] md:w-[200px] text-blue-600;
+  }
+  .logos-card-2-button:hover {
+    @apply bg-indigo-300 underline italic;
+  }
+  .logos-card-3 {
+    @apply text-[12px] md:text-sm flex flex-col text-justify mx-auto;
+  }
+  .logos-card-3-span {
+    @apply text-blue-400;
+  }
+  .quemsomos-section {
+    @apply flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full;
+  }
+  .quemsomos-header {
+    @apply text-teal-600 text-[30px] md:text-[45px] lg:text-[55px] xl:text-[70px];
+  }
+  .quemsomos-apresentação {
+    @apply gap-1 text-sm lg:text-[20px] w-2/4 text-muted;
+  }
+  .quemsomos-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-5 gap-x-10 md:w-3/5 mt-5 items-center justify-center;
+  }
+  .quemsomos-card {
+    @apply flex flex-col items-center justify-center bg-gradient-to-b from-header/80 to-header p-5 gap-y-5 w-full max-w-[300px] min-w-[200px] md:min-w-min border-x border-b border-teal-900 mx-auto;
+  }
+  .quemsomos-card-img {
+    @apply border-2 rounded-full border-blue-500 p-1;
+  }
+  .quemsomos-card-description {
+    @apply text-sm;
+  }
+  .wave-image {
+    @apply w-full max-h-[100px] bg-white mt-5 mb-0;
+  }
+  .wave-image-2 {
+    @apply w-full max-h-[100px] bg-white mb-5 mt-0 -scale-100;
+  }
+  .como-section {
+    @apply flex flex-col text-center items-center gap-3 p-1 py-10 gap-y-5 bg-white w-full;
+  }
+  .como-header {
+    @apply text-teal-500 text-[25px] md:text-[30px] lg:text-[40px];
+  }
+  .como-apresentação {
+    @apply text-teal-700 gap-x-1 text-sm lg:text-[20px] w-3/4 md:w-1/2;
+  }
+  .como-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:w-8/12 my-5 items-center justify-center bg-gradient-to-l from-white via-blue-300  to-white py-10 text-justify rounded-md;
+  }
+  .como-card {
+    @apply flex flex-col items-center bg-gradient-to-br from-teal-900/80 to-teal-950 p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto;
+  }
+  .como-icon {
+    @apply w-[80px] h-[60px] md:w-[120px] md:h-[100px];
+  }
+  .como-title {
+    @apply text-sm sm:text-[11px] lg:text-lg text-center;
+  }
+  .como-button {
+    @apply bg-gradient-to-br from-green-700 via-green-600 to-green-800 text-white border-2 border-green-500 shadow-inner shadow-green-300 px-8 md:px-12 italic w-[100px];
+  }
+  .como-button:hover {
+    @apply shadow-green-200 border-green-400 from-green-500 underline;
+  }
+  .artigos-section {
+    @apply flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-10 w-full;
+  }
+  .artigos-title {
+    @apply text-teal-600 text-[30px] md:text-[45px] lg:text-[55px] xl:text-[70px];
+  }
+  .artigos-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-5 w-11/12 items-center justify-center;
+  }
+  .artigos-card {
+    @apply relative flex flex-col bg-slate-900 gap-y-3 w-full max-w-[300px] min-w-[250px] md:min-w-[210px] mx-auto shadow-sm shadow-white;
+  }
+  .artigos-card-span {
+    @apply absolute text-white m-2 z-10 right-0 text-end bg-slate-200/30 p-1 rounded-2xl;
+  }
+  .artigos-card-image {
+    @apply w-full h-full;
+  }
+  .artigos-card-perfil {
+    @apply absolute bottom-1/3 right-0 mx-5 my-2 border border-cyan-500 p-1 rounded-full;
+  }
+  .artigos-card-description-1 {
+    @apply text-sm text-start text-white ml-4 items-center justify-center;
+  }
+  .artigos-card-description-1-span {
+    @apply bg-green-500 rounded-full px-[3px] text-transparent ml-1 text-[7px];
+  }
+  .artigos-card-description-2 {
+    @apply text-sm text-start ml-4 font-semibold text-white text-[16px];
+  }
+  .artigos-card-footer {
+    @apply text-center justify-center;
+  }
+  .artigos-button {
+    @apply bg-gradient-to-br from-green-700 via-green-600 to-green-800 text-white border-2 border-green-500 shadow-inner shadow-green-300 px-8 md:px-12 hover:shadow-green-200 hover:border-green-400 hover:from-green-400 min-w-[150px] text-lg;
+  }
+  .artigos-button:hover {
+    @apply shadow-green-200 border-green-400 from-green-400 underline;
+  }
+}
+/*CSS LogIn / SignUp*/
+@layer components {
+  .main-grid {
+    @apply min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 py-5 lg:gap-x-3;
+  }
+  .logo {
+    @apply col-span-1 lg:col-span-2 m-auto justify-center items-center flex;
+  }
+  .logo-img {
+    @apply opacity-20 hover:opacity-40 w-[300px] md:w-[550px];
+  }
+  .logo-img-logo {
+    @apply opacity-80 absolute -z-10 w-[250px] md:w-[280px] lg:w-[350px];
+  }
+  .section {
+    @apply border-t-2 md:border-l-2 md:border-t-0 border-header justify-center items-center flex flex-col space-y-6 p-2;
+  }
+  .title {
+    @apply text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500/90  to-slate-200/50 my-10 text-justify;
+  }
+  .github-button {
+    @apply flex items-center space-x-1 text-sm text-white;
+  }
+  .github-button:hover {
+    @apply opacity-70;
+  }
+  .divider-span {
+    @apply text-sm text-muted;
+  }
+  .form-div {
+    @apply flex space-x-2 items-center justify-center;
+  }
+  .form-icon {
+    @apply size-10 text-gray-300;
+  }
+  .form-input {
+    @apply bg-transparent border-background/80 w-full;
+  }
+  .button-change-page {
+    @apply flex text-justify;
+  }
+  .button-change-page:hover {
+    @apply opacity-70;
+  }
+  .button-change-page-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-slate-200;
+  }
+  .button-change-page-icon {
+    @apply size-8 text-white;
+  }
+  .button-submit {
+    @apply flex w-[250px] mx-auto bg-blue-500 font-semibold;
+  }
+  .button-submit:hover {
+    @apply bg-blue-500/80;
+  }
+  .login-button-password {
+    @apply flex mx-auto text-muted;
+  }
+  .login-button-password:hover {
+    @apply opacity-70;
+  }
+  .signup-checkbox-div {
+    @apply flex items-center space-x-2 w-[300px]
+  }
+  .signup-checkbox-input {
+    @apply bg-transparent border-background/80 w-fit
+  }
+  .signup-checkbox-rights {
+    @apply flex-1 text-justify text-muted
+  }
+  .signup-checkbox-rights-link {
+    @apply text-blue-500 hover:underline
   }
 }

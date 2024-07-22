@@ -4,7 +4,7 @@ import { cn } from "../../lib/util";
 export const CardDescription = forwardRef(({ className, ...props }, ref) => {
   return (
     <p
-      className={cn("text-sm text-slate-300", className)}
+      className={cn("", className)}
       {...props}
       ref={ref}
     />

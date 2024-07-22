@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import ThemePlugin from './src/styles/theme'
+import ThemePlugin from './src/styles/theme';
 
 const config = {
   content: [
@@ -9,10 +9,17 @@ const config = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'], 
+      },
+      fontSize: {
+        'responsive': '5vw',
+      },
       letterSpacing: {
-        '38': '0.38em', 
-      }
-    }
+        'wide-custom': '0.38em',
+      },
+    },
   },
   plugins: [ThemePlugin],
 };
