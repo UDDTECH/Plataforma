@@ -1,0 +1,227 @@
+
+/* container primario */
+
+.container__primaria {
+  @apply grid grid-cols-1 md:grid-cols-6 items-center gap-1 p-1 min-h-[80vh] w-11/12
+}
+
+.container__primaria--Card{
+  @apply col-span-1 md:col-span-3 lg:col-span-4 text-justify bg-inherit  space-y-5
+}
+
+.container__primaria--Card__titulo{
+  @apply flex-1 font-poppins font-medium text-cyan-200 tracking-wide-custom md:text-[50px] lg:text-[65px] xl:text-[50px];
+}
+
+.container__primaria--Card__description--primeiro{
+  @apply flex-1 items-center gap-x-1 text-[21px] lg:text-[25px]
+}
+
+.container__primaria--Card__description--segundo {
+  @apply flex-1 items-center gap-x-1 text-[21px] lg:text-[21px]
+}
+
+.container__primaria--img__container{
+  @apply col-span-1 md:col-span-3 lg:col-span-2 grid grid-rows-2 text-justify bg-inherit p-5 space-y-5
+}
+
+.container__primaria--img__container--img{
+  @apply  w-fit md:w-[250px] lg:w-[275px] xl:w-[369px] 2xl:w-[400px] ml-auto rounded-md border p-2 border-cyan-400/40
+}
+
+/* media query */
+
+@media (max-width:758px) {
+  .container__primaria--Card__titulo{
+    font-size: 2.5rem;
+  }
+}
+
+/* ====================================================== */
+
+/* segundo container de informações  */
+
+.container__informacoes{
+  @apply  flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-5 w-full
+}
+
+.container__informacoes--cards{
+  @apply grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-y-20  p-1 w-10/12 
+}
+
+.container__informacoes--cards--img {
+  @apply  items-center justify-center flex flex-col mx-auto
+}
+
+.container__informacoes--cards--img__disc{
+  @apply items-center justify-center flex flex-col gap-y-2 mx-auto
+}
+
+.container__informacoes--informacoes__adcionais{
+  @apply text-[20px] md:text-sm flex flex-col text-justify mx-auto gap-y-1
+}
+
+.informacoes__adcionais--description{
+  @apply font-montserrat text-[20px] font-normal leading-[24.38px] text-left
+}
+
+/* ====================================================== */
+
+/*Quem Somos */
+
+.container__quemsomos{
+  @apply flex flex-col text-center items-center my-10 gap-3 p-1 py-5 w-full
+}
+
+.container__quemsomos--titulo{
+  @apply  text-white text-[30px] md:text-[45px] lg:text-[55px] xl:text-[70px]
+}
+
+.container__quemsomos--paragrafo {
+  @apply gap-x-1 gap-y-5 text-base lg:text-[18px] w-full md:w-3/4 font-normal
+}
+
+.container__quemsomos--perfil{
+  @apply  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-x-10 w-full md:w-3/5 mt-5 items-center justify-center
+}
+
+.container__quemsomos--perfil--card{
+  @apply flex flex-col items-center justify-center  from-gray-300/80 to-gray-500 p-5 gap-y-5 w-full mx-auto;
+}
+
+.container__quemsomos--perfil--card--img {
+  @apply border-2 rounded-full border-blue-500 p-1 w-[243px]
+}
+
+/* ====================================================== */
+
+/* Como Funciona*/
+
+.comofunciona__container{
+  @apply flex flex-col text-center font-bold items-center gap-3 p-1 py-10 gap-y-5 bg-white w-full
+}
+
+.comofunciona__container--titulo{
+  @apply text-custom-color-titulo text-[20px] md:text-[30px] lg:text-[40px]
+}
+
+.comofunciona__container--paragrafo{
+  @apply text-custom-color-subtitulo gap-x-1 text-sm lg:text-[20px] w-3/4 md:w-1/2 font-medium
+}
+
+
+@media (max-width:758px) {
+  .comofunciona__container--titulo{
+    font-size: 4.5rem;
+  }
+
+  .comofunciona__container--paragrafo{
+    font-size: 2rem;
+  }
+}
+
+.comofunciona__container--card__container{
+  @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:w-8/12 my-5 items-center justify-center py-10 text-justify rounded-md
+}
+
+.card__container--card{
+  @apply  flex flex-col items-center p-5 gap-y-5 w-full max-w-[300px] min-h-[300px] border-x border-b border-teal-500/80 shadow-lg shadow-black mx-auto;
+  border-radius: 75px 75px 250px 250px;
+  background: linear-gradient(135deg, #3a6073 0%, #0c1821 100%);
+}
+
+.card__container--card--titulo{
+  @apply text-white font-semibold md:text-[2rem] lg:text-[2rem] xl:text-[2rem];
+}
+
+.card__container--card--paragrafo{
+  @apply md:text-[1.4rem] lg:text-[1.4rem] xl:text-[1.4rem] font-medium text-white
+}
+
+.card__container--card--button{
+  @apply w-[60%] h-auto rounded-[20px_20px_60px_60px] text-black bg-white text-[1.5rem] 
+}
+
+.container__artigos--titulo {
+  @apply  text-white text-[5rem] md:text-[4rem] lg:text-[5rem] xl:text-[5rem] font-bold
+}
+
+@media (max-width: 765px) {
+  .card__container--card--titulo{
+    font-size: 1.5rem;
+  }
+
+  .card__container--card--paragrafo{
+    font-size: 1.2rem;
+  }
+}
+
+/*Artigos Publicados */
+
+.container__artigos {
+  @apply flex flex-col text-center items-center my-10 gap-3 p-1 py-5 gap-y-10 w-full
+}
+
+.container__artigos--card__container{
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-5 w-11/12 items-center justify-center
+}
+.card__container--card_artigos{
+  @apply  relative flex flex-col gap-y-3 w-full max-w-[300px] min-w-[200px] md:min-w-min mx-auto shadow-sm shadow-white bg-[#242730]
+}
+
+.card__container--card_artigos--perfil{
+  @apply absolute bottom-1/3 right-0 mx-5 my-2 border border-cyan-500 p-1 rounded-full
+}
+
+.card__container--card_artigos--description--perfil{
+  @apply text-start ml-4 items-center justify-center
+}
+
+.card__container--card_artigos--content{
+  @apply text-start ml-4 font-semibold text-white text-[16px]
+}
+
+@media (max-width: 485px) {
+  .container__artigos--titulo{
+    font-size: 3.5rem;
+  }
+}
+
+
+.footer-title{
+  color: red;
+}
+
+.text-custom-color-titulo{
+  color: #44606e;
+  font-weight: 600;
+  font-size: 70px;
+}
+
+.text-custom-color-subtitulo{
+  color: #44606e;
+  font-size: 2.5rem;
+  width: 60%;
+  line-height: 1.5;
+}
+
+/* Fonte Roboto Bold */
+.font-roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Estilos do footer */
+.footer-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 20.13px;
+  text-align: center;
+  color: #ffffff;
+}
